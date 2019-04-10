@@ -1,0 +1,19 @@
+# step1:Tophat mapping
+PATH=$PATH:/ebio/abt6_projects7/small_projects/wzhu/bin/bowtie2
+
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o crwn_rep1_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index crwn_rep1_r1.fastq.gz crwn_rep1_r2.fastq.gz
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o crwn_rep2_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index crwn_rep2_r1.fastq.gz crwn_rep2_r2.fastq.gz
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o crwn_rep3_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index crwn_rep3_r1.fastq.gz crwn_rep3_r2.fastq.gz
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o col_rep1_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index col_rep1_r1.fastq.gz col_rep1_r2.fastq.gz
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o col_rep2_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index col_rep2_r1.fastq.gz col_rep2_r2.fastq.gz
+/ebio/abt6_projects7/small_projects/wzhu/bin/tophat2/tophat2 -o col_rep3_thout -G /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/Arabidopsis_thaliana.TAIR10.24_tophat.gtf -p 8 /ebio/abt6_projects7/small_projects/wzhu/bin/TAIR10_index/TAIR10_index col_rep3_r1.fastq.gz col_rep3_r2.fastq.gz
+
+# step2:cufflinks
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o col_rep1_clout col_rep1_thout/accepted_hits.bam
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o col_rep2_clout col_rep2_thout/accepted_hits.bam
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o col_rep3_clout col_rep3_thout/accepted_hits.bam
+
+
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o crwn_rep1_clout crwn_rep1_thout/accepted_hits.bam
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o crwn_rep2_clout crwn_rep2_thout/accepted_hits.bam
+/ebio/abt6_projects7/small_projects/wzhu/bin/cufflinks-2.2.1.Linux_x86_64/cufflinks -p 8 -o crwn_rep3_clout crwn_rep3_thout/accepted_hits.bam
