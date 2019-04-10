@@ -1,0 +1,6 @@
+
+#Generate count table describing sequencing depth of each defined genomic region
+#mapping files (bam file) are used as input
+#Coordinates of the genomic regions to be analyzed are supplied as a bed file
+#for example:
+bedtools multicov -bams WT_2C_ATAC_rep1.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam WT_2C_ATAC_rep2.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam crwn1_2C_ATAC_rep1.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam crwn1_2C_ATAC_rep2.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam kaku4_2C_ATAC_rep1.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam kaku4_2C_ATAC_rep2.R1.RUN0097.L3.fastq_mapped_SE_sorted.bam -bed genome_wide_50kb.bed > ATAC_WT_crwn1_kaku4_8C_count_table_50kb.txt
