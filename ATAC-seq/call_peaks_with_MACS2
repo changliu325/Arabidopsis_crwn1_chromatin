@@ -1,0 +1,5 @@
+macs2 callpeak -t Col_2C_ATAC_rep1.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam Col_2C_ATAC_rep2.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam --nomodel --shift -50 --extsize 100 -f BAM -B -g 1.2e8 -n ATAC_seq_SE_WT_2C --keep-dup=1  --outdir=ATAC_seq_SE_WT_2C_extsize_100
+
+macs2 callpeak -t crwn1_2C_ATAC_rep1.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam crwn1_2C_ATAC_rep2.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam --nomodel --shift -50 --extsize 100 -f BAM -B -g 1.2e8 -n ATAC_seq_SE_crwn1_2C --keep-dup=1  --outdir=ATAC_seq_SE_crwn1_2C
+
+macs2 callpeak -t kaku4_2_2C_ATAC_rep1.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam kaku4_2_2C_ATAC_rep2.R1.RUN0106.L2.fastq_mapped_SE_sorted.bam --nomodel --shift -50 --extsize 100 -f BAM -B -g 1.2e8 -n ATAC_seq_SE_kaku4_2_2C --keep-dup=1  --outdir=ATAC_seq_SE_kaku4_2_2C
