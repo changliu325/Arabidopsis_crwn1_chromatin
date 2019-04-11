@@ -2,6 +2,10 @@
 
 
 
+# this R script does following:
+# 1) extract nuclear boundary
+# 2) calculate the distance of each pixel inside the nucleus from the nuclear periphery
+# 3) correlate the confocal signals (Green/Red channels) to the distances obtained from step 2.
 
 # load library
 options(stringsAsFactors=F, scipen=999)
