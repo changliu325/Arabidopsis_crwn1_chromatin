@@ -1,1 +1,14 @@
-to be done
+Step 1:
+	format_fastq_to_101bp:  to produce the input fastq file for step 2
+
+Step 2: 
+	iterative_mapping: run it with your R1 and R2 fastq files separately. The output is a txt file recoding whether a read has been mapped uniquely on to the reference genome.
+
+Step 3:
+	combine_R1_R2_mapping: to decide if both R1/R2 in a read pair has been uniquely mapped; it also removes PCR duplicates. The output is a txt file.
+
+Step 4:
+HiC_filter_mapped_reads: filter mapped reads so that only informative Hi-C reads will be retained, the output file is a text file
+
+Step 5: 
+ICE_by_chromosome_binac or ICE_whole_genome_binac: perform Hi-C matrix normalization, the input file is filtered Hi-C reads from step 4.
